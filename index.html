@@ -43,35 +43,55 @@
 </head>
 <body class="min-h-screen flex flex-col items-center justify-between p-4 text-slate-100 antialiased selection:bg-amber-500 selection:text-black">
 
-  <!-- Top Brand Navigation -->
-  <header class="w-full max-w-md pt-3 pb-2 flex items-center justify-between">
-    <div class="flex items-center gap-2.5">
-      <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-amber-500 to-amber-300 flex items-center justify-center font-extrabold text-slate-950 text-base shadow-lg shadow-amber-500/20">
-        PL
-      </div>
-      <div>
-        <div class="flex items-center gap-1.5">
-          <span class="font-bold text-sm tracking-wide text-white">ProLine Wrap & PPF</span>
-          <svg class="w-4 h-4 text-sky-400 fill-current" viewBox="0 0 20 20">
-            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-          </svg>
+  <!-- Top Brand Navigation with Studio Banner -->
+  <header class="w-full max-w-md pt-3 pb-2 flex flex-col gap-2.5">
+    <div class="flex items-center justify-between">
+      <div class="flex items-center gap-2.5">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-amber-500 via-yellow-400 to-amber-300 flex flex-col items-center justify-center text-slate-950 font-black text-xs shadow-lg shadow-amber-500/25 border border-amber-400/50">
+          <span class="tracking-tighter leading-none">PRO</span>
+          <span class="text-[9px] font-bold text-amber-950 leading-none">LINE</span>
         </div>
-        <p class="text-[11px] text-slate-400 font-medium">Verified Customer Feedback</p>
+        <div>
+          <div class="flex items-center gap-1.5">
+            <span class="font-bold text-sm tracking-wide text-white">ProLine Wrap & PPF</span>
+            <svg class="w-4 h-4 text-sky-400 fill-current" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+          </div>
+          <p class="text-[11px] text-slate-400 font-medium">Chaussée de Louvain 623, Zaventem</p>
+        </div>
+      </div>
+      <span class="text-[10px] font-semibold uppercase tracking-wider px-2.5 py-1 bg-amber-500/10 border border-amber-500/30 text-amber-400 rounded-full">
+        Live Demo
+      </span>
+    </div>
+
+    <!-- Workshop Studio Photo -->
+    <div class="w-full h-24 rounded-2xl overflow-hidden relative border border-slate-800 shadow-lg group">
+      <img 
+        src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=800&q=80" 
+        alt="ProLine Wrap Studio" 
+        class="w-full h-full object-cover brightness-[0.75] contrast-[1.1]"
+      />
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
+      <div class="absolute bottom-2 left-3 right-3 flex items-center justify-between">
+        <span class="text-[11px] font-bold text-white tracking-wide flex items-center gap-1.5">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          Vehicle Wrapping & PPF Studio
+        </span>
+        <span class="text-[10px] font-medium text-amber-400 bg-black/60 backdrop-blur-sm px-2 py-0.5 rounded-md border border-amber-500/30">
+          Zaventem, Belgium
+        </span>
       </div>
     </div>
-    <span class="text-[10px] font-semibold uppercase tracking-wider px-2.5 py-1 bg-amber-500/10 border border-amber-500/30 text-amber-400 rounded-full">
-      Live Demo
-    </span>
   </header>
 
   <!-- Main Card Container -->
-  <main class="w-full max-w-md my-auto py-4">
+  <main class="w-full max-w-md my-auto py-2">
     <div class="bg-slate-900/90 border border-slate-800/90 backdrop-blur-xl rounded-3xl p-6 sm:p-7 shadow-2xl relative overflow-hidden gold-glow">
-      
-      <!-- Top Decorative Accent -->
       <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-amber-500 to-transparent opacity-80"></div>
 
-      <!-- ================= STEP 1: RATING SELECTION ================= -->
+      <!-- STEP 1: RATING SELECTION -->
       <section id="step-rating" class="fade-in space-y-6">
         <div class="text-center space-y-2">
           <div class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-slate-800/80 border border-slate-700/60 text-xs text-slate-300 font-medium">
@@ -85,7 +105,6 @@
           </p>
         </div>
 
-        <!-- 5 Star Interactive Group -->
         <div class="flex justify-center items-center gap-2.5 py-2">
           <button type="button" onclick="selectRating(1)" class="star-btn p-1.5 text-slate-600 focus:outline-none" aria-label="1 star" id="star-1">
             <svg class="w-10 h-10 fill-current" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
@@ -108,7 +127,6 @@
           Tap 1 to 5 stars above
         </div>
 
-        <!-- Quick Numerical Buttons for High Conversions -->
         <div class="grid grid-cols-5 gap-2 pt-1">
           <button onclick="selectRating(1)" class="py-2.5 rounded-xl text-xs font-bold bg-slate-800/70 hover:bg-slate-700/80 border border-slate-700/50 text-slate-300 active:scale-95 transition">1</button>
           <button onclick="selectRating(2)" class="py-2.5 rounded-xl text-xs font-bold bg-slate-800/70 hover:bg-slate-700/80 border border-slate-700/50 text-slate-300 active:scale-95 transition">2</button>
@@ -123,7 +141,7 @@
         </div>
       </section>
 
-      <!-- ================= STEP 2A: POSITIVE FLOW (4 or 5 STARS) ================= -->
+      <!-- STEP 2A: POSITIVE FLOW (4 or 5 STARS) -->
       <section id="step-positive" class="hidden fade-in text-center space-y-5">
         <div class="w-16 h-16 mx-auto rounded-2xl bg-amber-500/15 border border-amber-500/30 flex items-center justify-center text-3xl shadow-xl shadow-amber-500/10">
           ⭐
@@ -137,11 +155,10 @@
             Thank you so much!
           </h2>
           <p class="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-xs mx-auto">
-            Reviews mean the world to our team at <strong class="text-white">ProLine Wrap & PPF</strong> and help fellow enthusiasts find us!
+            Reviews mean the world to our team at <strong class="text-white">ProLine Wrap & PPF</strong> and help fellow car enthusiasts find us!
           </p>
         </div>
 
-        <!-- Auto Redirect Alert Box -->
         <div class="p-4 rounded-2xl bg-slate-800/80 border border-slate-700/70 text-left space-y-2">
           <div class="flex items-center justify-between">
             <span class="text-xs font-semibold text-slate-200 flex items-center gap-2">
@@ -149,7 +166,7 @@
                 <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
                 <span class="relative inline-flex rounded-full h-2 w-2 bg-amber-500"></span>
               </span>
-              Auto-Routing to Google Reviews...
+              Auto-Routing to ProLine Reviews...
             </span>
             <span id="countdown-badge" class="text-xs font-mono font-bold text-amber-400 bg-amber-500/10 px-2 py-0.5 rounded-md border border-amber-500/20">
               2s
@@ -160,18 +177,18 @@
           </div>
         </div>
 
-        <!-- Direct Instant Action Button with Direct Review Tab Link -->
-        <a id="google-direct-link" href="https://www.google.com/maps/place/ProLine+Wrap%26PPF/@50.8776673,4.4990836,17z/data=!4m8!3m7!1s0x47c3ddaae95a2bd9:0x63d55f0c85391805!8m2!3d50.8776673!4d4.5016585!9m1!1b1" target="_blank" class="w-full inline-flex items-center justify-center gap-2.5 py-3.5 px-6 rounded-xl font-bold text-sm bg-gradient-to-r from-amber-500 to-amber-400 hover:from-amber-400 hover:to-amber-300 text-slate-950 shadow-lg shadow-amber-500/25 active:scale-95 transition">
+        <!-- Direct CID Business Link -->
+        <a id="google-direct-link" href="https://maps.google.com/?cid=7193760487173593093" target="_blank" class="w-full inline-flex items-center justify-center gap-2.5 py-3.5 px-6 rounded-xl font-bold text-sm bg-gradient-to-r from-amber-500 to-amber-400 hover:from-amber-400 hover:to-amber-300 text-slate-950 shadow-lg shadow-amber-500/25 active:scale-95 transition">
           <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm4 0h-2v-6h2v6zm-2-8c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z"/></svg>
-          Open ProLine on Google Reviews
+          Leave 5-Star Review on Google
         </a>
 
         <p class="text-[11px] text-slate-500">
-          Didn't redirect? Tap the button above to leave your review.
+          Didn't redirect? Tap the button above to leave your review directly.
         </p>
       </section>
 
-      <!-- ================= STEP 2B: NEGATIVE FLOW (1 to 3 STARS) ================= -->
+      <!-- STEP 2B: NEGATIVE FLOW (1 to 3 STARS) -->
       <section id="step-negative" class="hidden fade-in space-y-4">
         <div class="text-center space-y-2">
           <div class="w-12 h-12 mx-auto rounded-2xl bg-rose-500/15 border border-rose-500/30 flex items-center justify-center text-2xl">
@@ -185,7 +202,6 @@
           </p>
         </div>
 
-        <!-- Complaint Form -->
         <form id="private-feedback-form" onsubmit="submitPrivateFeedback(event)" class="space-y-3 pt-1">
           <div>
             <label class="block text-[11px] font-semibold text-slate-400 uppercase tracking-wider mb-1">
@@ -212,7 +228,7 @@
         </form>
       </section>
 
-      <!-- ================= STEP 2C: PRIVATE FEEDBACK SENT ================= -->
+      <!-- STEP 2C: PRIVATE FEEDBACK SENT -->
       <section id="step-sent" class="hidden fade-in text-center space-y-4 py-3">
         <div class="w-14 h-14 mx-auto rounded-2xl bg-emerald-500/15 border border-emerald-500/30 flex items-center justify-center text-3xl text-emerald-400">
           ✓
@@ -233,7 +249,7 @@
     </div>
   </main>
 
-  <!-- ================= BOTTOM DEMO CONTROLS (FOR PROLINE OWNER TESTING) ================= -->
+  <!-- BOTTOM DEMO CONTROLS -->
   <footer class="w-full max-w-md pb-3 pt-1">
     <div class="bg-slate-900/90 border border-slate-800/90 rounded-2xl p-2.5 backdrop-blur-md flex items-center justify-between gap-2 shadow-xl">
       <div class="text-[11px] text-slate-400 pl-1 font-medium flex items-center gap-1.5">
@@ -254,10 +270,8 @@
     </div>
   </footer>
 
-  <!-- Application Logic -->
   <script>
-    // Direct link to Google Reviews section for ProLine Wrap & PPF
-    const GOOGLE_REVIEW_URL = "https://www.google.com/maps/place/ProLine+Wrap%26PPF/@50.8776673,4.4990836,17z/data=!4m8!3m7!1s0x47c3ddaae95a2bd9:0x63d55f0c85391805!8m2!3d50.8776673!4d4.5016585!9m1!1b1";
+    const GOOGLE_REVIEW_URL = "https://maps.google.com/?cid=7193760487173593093";
     let redirectTimer = null;
     let selectedRatingValue = 0;
 
